@@ -1,14 +1,10 @@
-<table>
-  <tr>
-    <td width="35%" valign="middle">
-      <h1>SCauCE</h1>
-      <p>This is a PyTorch implementation of the paper: <b>"A Scalable Causal Compression–Expansion Framework for Traffic Forecasting"</b>.</p>
-    </td>
-    <td width="65%" valign="middle">
-      <img src="architecture.pdf" alt="SCauCE.pdf" width="100%">
-    </td>
-  </tr>
-</table>
+## 📖 Introduction
+
+This is an official PyTorch implementation of the paper: [When Spatio-Temporal Meet Wavelets: Disentangled Traffic Forecasting via Efficient Spectral Graph Attention Networks](https://arxiv.org/abs/2211.15272).
+
+<p align="center">
+  <img src="Images/Scace.png" alt="SCauCE Architecture" width="100%">
+</p>
 
 ---
 
