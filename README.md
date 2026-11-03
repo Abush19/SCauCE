@@ -40,7 +40,8 @@ SCauCE/
 ├── Model.py                      # SCauCE main model
 ├── prepareData.py                # Data preprocessing
 ├── Train.py                      # Main training and testing script
-└── Readme.md
+├── Readme.md
+└── Requirement.txt     
 ```
 
 ---
