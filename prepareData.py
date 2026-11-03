@@ -161,7 +161,6 @@ if __name__ == "__main__":
 #     parser = argparse.ArgumentParser()
 #     parser.add_argument(
 
-#         'config', nargs='?', default='zclau-4-deep4-Intervention-deeperLayersr2nohl/conf/PEMSD7_1dim_12.conf',
+#         'config', nargs='?', default='... /conf/PEMSD7_1dim_12.conf',
 #         help='Dataset configuration file (defaults to the original project path)')
 #     prepare_dataset(parser.parse_args().config)
-
