@@ -1,6 +1,6 @@
 ## 📖 Introduction
 
-This is an official PyTorch implementation of the paper: [When Spatio-Temporal Meet Wavelets: Disentangled Traffic Forecasting via Efficient Spectral Graph Attention Networks](https://arxiv.org/abs/2211.15272).
+This is a PyTorch implementation of the paper: **"A Scalable Causal Compression–Expansion Framework for Traffic Forecasting"**.
 
 <p align="center">
   <img src="Images/SCauCE.png" alt="SCauCE Architecture" width="100%">
