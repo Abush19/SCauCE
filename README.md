@@ -1,6 +1,14 @@
-# SCauCE
-
-This is a PyTorch implementation of the paper: **"A Scalable Causal Compression–Expansion Framework for Traffic Forecasting"**.
+<table>
+  <tr>
+    <td width="35%" valign="middle">
+      <h1>SCauCE</h1>
+      <p>This is a PyTorch implementation of the paper: <b>"A Scalable Causal Compression–Expansion Framework for Traffic Forecasting"</b>.</p>
+    </td>
+    <td width="65%" valign="middle">
+      <img src="architecture.png" alt="SCauCE Architecture" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
