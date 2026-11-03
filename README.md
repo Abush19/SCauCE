@@ -3,7 +3,7 @@
 This is an official PyTorch implementation of the paper: [When Spatio-Temporal Meet Wavelets: Disentangled Traffic Forecasting via Efficient Spectral Graph Attention Networks](https://arxiv.org/abs/2211.15272).
 
 <p align="center">
-  <img src="Images/Scace.png" alt="SCauCE Architecture" width="100%">
+  <img src="Images/SCauCE.png" alt="SCauCE Architecture" width="100%">
 </p>
 
 ---
