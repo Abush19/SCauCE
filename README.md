@@ -5,7 +5,7 @@
       <p>This is a PyTorch implementation of the paper: <b>"A Scalable Causal Compression–Expansion Framework for Traffic Forecasting"</b>.</p>
     </td>
     <td width="65%" valign="middle">
-      <img src="architecture.png" alt="SCauCE Architecture" width="100%">
+      <img src="architecture.pdf" alt="SCauCE.pdf" width="100%">
     </td>
   </tr>
 </table>
