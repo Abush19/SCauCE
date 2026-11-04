@@ -81,8 +81,9 @@ python Train.py --config conf/PEMSD3_1dim_12.conf
 
 ## Citation
 
-If you use this code in your research, please cite the SCauCE paper.
+If you find this paper and code helpful in your research, please cite the SCauCE paper.
+
+> **Note:** The BibTeX entry will be updated once the paper is officially published.
 
 ```bibtex
-% To be updated.
-```
+% To be updated upon publication.
