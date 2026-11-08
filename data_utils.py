@@ -10,7 +10,6 @@ class StandardScaler:
 
     def transform(self, data):
         return (data - self.mean) / (self.std + 1e-8)
-
     def inverse_transform(self, data):
         return (data * self.std) + self.mean
 class SCauCEDataLoader:
@@ -43,7 +42,6 @@ class SCauCEDataLoader:
             while self.current_ind < self.num_batch:
                 start = self.current_ind * self.batch_size
                 end = min(start + self.batch_size, self.size)
-                
                 x_batch = self.xs[start:end]
                 y_batch = self.ys[start:end]
                 ind_batch = self.inds[start:end] % self.days
@@ -65,7 +63,6 @@ def load_scauce_data(data_path, batch_size, in_seq=12, out_seq=12, days=288):
     val_y = data['val_target']
     test_x = data['test_x']
     test_y = data['test_target']
-    
     # Temporal embeddings 
     train_te = data['trainTE']     
     val_te = data['valTE']
@@ -82,11 +79,6 @@ def load_scauce_data(data_path, batch_size, in_seq=12, out_seq=12, days=288):
             raise ValueError(f"Invalid {name} temporal indices: expected [day 0-6, slot 0-{days-1}].")
     
     num_nodes = train_x.shape[2]
-    
-    # print(f"Number of nodes: {num_nodes}")
-    # print(f"Train: x={train_x.shape}, y={train_y.shape}, te={train_te.shape}")
-    # print(f"Val: x={val_x.shape}, y={val_y.shape}, te={val_te.shape}")
-    # print(f"Test: x={test_x.shape}, y={test_y.shape}, te={test_te.shape}")
 
     print(f"Train: x={train_x.shape}, y={train_y.shape}")
     print(f"Val: x={val_x.shape}, y={val_y.shape}")
@@ -113,8 +105,6 @@ def load_scauce_data(data_path, batch_size, in_seq=12, out_seq=12, days=288):
     train_ind = train_te[:, 0, 1].astype(np.int64)
     val_ind   = val_te[:, 0, 1].astype(np.int64)
     test_ind  = test_te[:, 0, 1].astype(np.int64)
-
- 
     train_te_in = train_te[:, :in_seq, :].astype(np.int64)
     val_te_in   = val_te[:, :in_seq, :].astype(np.int64)
     test_te_in  = test_te[:, :in_seq, :].astype(np.int64)
