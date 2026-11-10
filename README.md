@@ -9,12 +9,14 @@ This is a PyTorch implementation of the paper: **"A Scalable Causal Compressionâ
 ---
 
 ## âš¡ Requirements
-
+- python 3.8+
 - matplotlib
 - numpy
 - scipy
 - pandas
 - torch
+- scikit-learn
+
 
 Install them with:
 
@@ -54,7 +56,7 @@ SCauCE/
 
 Datasets used: **PEMS08, PEMS07, PEMS04, PEMS03**
 
-Download the data from [Google Drive](https://drive.google.com/drive/folders/1SZbGhd8epBjzOC1AIff5cx3f39hcDwyP?usp=drive_link) and unzip them into the corresponding folders under `data/`.
+Download all four datasets from [Google Drive](https://drive.google.com/drive/folders/1SZbGhd8epBjzOC1AIff5cx3f39hcDwyP?usp=drive_link) and unzip them into the corresponding folders under `data/`.
 
 > **Tip:** The name of each downloaded dataset folder must match the name used in the configuration files.
 
