@@ -171,7 +171,8 @@ class CausalCompression(nn.Module):
         hub_scores = torch.zeros(B, N, device=h_seq.device)
         hub_scores.scatter_(1, hub_indices, 1.0)
         return hub_indices, gc_full, hub_scores, h
-
+        
+#3. Causal Backbone Expansion (CBE)
 #  Hypergraph Construction
 
 class HypergraphBuilder(nn.Module):
@@ -209,7 +210,6 @@ class HypergraphBuilder(nn.Module):
         H_down = H_down_raw / (H_down_raw.sum(dim=2, keepdim=True) + 1e-8)
         return H_up, H_down, gc_i2p, gc_p2j
 
-#3. Causal Backbone Expansion (CBE)
 # 1. Converging Phase
 
 class ConvergingPhase(nn.Module):
