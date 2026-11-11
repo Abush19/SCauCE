@@ -208,7 +208,7 @@ class HypergraphBuilder(nn.Module):
         H_down = H_down_raw / (H_down_raw.sum(dim=2, keepdim=True) + 1e-8)
         return H_up, H_down, gc_i2p, gc_p2j
 
-# Causal Compresion
+# Causal Expansion
 # 1. Converging Phase
 
 class ConvergingPhase(nn.Module):
@@ -336,7 +336,6 @@ class CausalGating(nn.Module):
         gate_in = torch.cat([h_prior, h_expanded, c_i, delta_i], dim=-1)
         gamma = self.gate_net(gate_in)
         return gamma * h_expanded + (1 - gamma) * h_prior
-
 
 class ForecastingHead(nn.Module):
     def __init__(self, node_dim: int, out_steps: int, 
