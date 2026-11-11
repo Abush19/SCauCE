@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+#1. Spatio-Temporal Representation Learning (STRL)
 # Node-Specific Pe-riodic Encoder (NSPE)
 
 class NSPE(nn.Module):
@@ -59,7 +60,7 @@ class TSB(nn.Module):
         out = out.reshape(B, N, T, -1)
         return out
 
-# Causal Compression
+#2. Causal Backbone Compression (CBE)
 
 class NISPrescreener(nn.Module):
     def __init__(self, node_dim: int, hidden: int, K: int):
@@ -208,7 +209,7 @@ class HypergraphBuilder(nn.Module):
         H_down = H_down_raw / (H_down_raw.sum(dim=2, keepdim=True) + 1e-8)
         return H_up, H_down, gc_i2p, gc_p2j
 
-# Causal Expansion
+#3. Causal Backbone Expansion (CBE)
 # 1. Converging Phase
 
 class ConvergingPhase(nn.Module):
@@ -318,7 +319,7 @@ class DivergingPhase(nn.Module):
 
         return h_new, Z_prop
 
-# Causal Reliability Calibration (CRC)
+#4. Causal Reliability Calibration (CRC)
 
 class CausalGating(nn.Module):
     def __init__(self, node_dim: int):
