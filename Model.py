@@ -79,7 +79,7 @@ class NISPrescreener(nn.Module):
         _, nis_idx = torch.topk(influence, self.K, dim=1)
         return influence, nis_idx
 
-class TemporalNeuralGrangerScorer(nn.Module):
+class NeuralGrangerScorer(nn.Module):
     def __init__(self, node_dim: int, hidden: int, num_lags: int):
         super().__init__()
         self.num_lags = num_lags
@@ -150,7 +150,7 @@ class CausalCompression(nn.Module):
         self.P = P
         self.alpha = alpha
         self.cis = NISPrescreener(node_dim, hidden=gc_hidden // 2, K=K)
-        self.gc_scorer = TemporalNeuralGrangerScorer(node_dim, gc_hidden, num_lags)
+        self.gc_scorer = NeuralGrangerScorer(node_dim, gc_hidden, num_lags)
 
     def forward(self, h_seq):
         B, N, T, D = h_seq.shape
